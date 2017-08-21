@@ -10,5 +10,7 @@ tap.test('Should validate numbers', function (t) {
   t.ok(!usdl.isValid('OR', 'A1234567'), 'Should not be valid');
   t.ok(!usdl.isValid('OR', 'B123456'), 'Should not be valid');
 
+  t.ok(usdl.isValid('NE', 'A123456'), 'Should be valid');
+
   t.end();
 });
