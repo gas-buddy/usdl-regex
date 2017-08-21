@@ -1,0 +1,15 @@
+box: node
+
+build:
+  steps:
+    - npm-install
+
+    - npm-test
+
+publish:
+  steps:
+    - script:
+      name: npm publish
+      code: |
+        echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+        npm publish . --tag latest
