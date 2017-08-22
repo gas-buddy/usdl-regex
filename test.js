@@ -1,16 +1,20 @@
 var tap = require('tap');
 var assert = require('assert');
 var usdl = require('./index');
+const test_data = require('./testdata/licenses');
 
 tap.test('Should validate numbers', function (t) {
-  t.ok(usdl.isValid('MA', 'A12334567'), 'Should be valid');
-  t.ok(!usdl.isValid('MA', 'SOFAKE'), 'Should be invalid');
 
-  t.ok(usdl.isValid('OR', 'A123456'), 'Should be valid');
-  t.ok(!usdl.isValid('OR', 'A1234567'), 'Should not be valid');
-  t.ok(!usdl.isValid('OR', 'B123456'), 'Should not be valid');
+  Object.keys(test_data).forEach(state => {
+    const valid = test_data[state].valid;
+    const invalid = test_data[state].invalid;
 
-  t.ok(usdl.isValid('NE', 'A123456'), 'Should be valid');
+    if (valid) {
+      valid.forEach(function(license) {
+        t.ok(usdl.isValid(state, license), state + ' ' + license + ' should be valid');
+      });
+    }
+  });
 
   t.end();
 });
