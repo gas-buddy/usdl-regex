@@ -1,8 +1,8 @@
 {
   "AL": {
-    "rule": "^[0-9]{1,7}$",
+    "rule": "^[0-9]{1,8}$",
     "description": [
-      "1-7 Numeric"
+      "1-8 Numeric"
     ]
   },
   "AK": {
