@@ -5,8 +5,43 @@ usdl-regex
 
 Node package for validating US Drivers License numbers. Based on other similar language modules which originate from https://ntsi.com/drivers-license-format/
 
+Usage
+=========
+## isValid(state, DLNumber)
+Pass in a State and a DL Number and it'll validate if it's true or false
+```
+  const { isValid } = require('usdl-regex');
+
+  const state = 'CA';
+
+  const truthyResult = isValid(state, 'F1112001');
+  // returns true
+
+  const falsyResult = isValid(state, 'ABC1112001');
+  // returns false
+```
+
+## isValidOrReturnDescription(state, DLNumber)
+Pass in a State and a DL Number and it'll validate if it's true or false.
+If it is "false", then it will return a description on what it expects
+```
+  const { isValid } = require('usdl-regex');
+
+  const state = 'CA';
+
+  const truthyResult = isValidOrReturnDescription(state, 'F1112001');
+  // returns true
+
+  const falsyResult = isValidOrReturnDescription(state, 'ABC1112001');
+  // returns ["1 Alpha + 7 Numeric"]
+```
+
 CHANGELOG
 =========
+# 1.4.0
+- Added a new method "isValidOrReturnDescription" to return description on falsy validation
+- Fixed some test cases
+- Edit README to contain "Usage" instructions
 
 # 1.0.3
 Fix Nebraska regex to allow 1Alpha+6-8Numeric
