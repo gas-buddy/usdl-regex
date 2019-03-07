@@ -13,6 +13,6 @@
   "author": "GasBuddy <developers@gasbuddy.com>",
   "license": "MIT",
   "devDependencies": {
-    "tap": "^10.3.2"
+    "tap": "^12.5.3"
   }
 }
