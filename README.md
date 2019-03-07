@@ -15,10 +15,10 @@ Pass in a State and a DL Number and it'll validate if it's true or false
   const state = 'CA';
 
   const truthyResult = isValid(state, 'F1112001');
-  // returns 'true'
+  // returns true
 
   const falsyResult = isValid(state, 'ABC1112001');
-  // returns 'false'
+  // returns false
 ```
 
 ## isValidOrReturnDescription(state, DLNumber)
@@ -30,7 +30,7 @@ If it is "false", then it will return a description on what it expects
   const state = 'CA';
 
   const truthyResult = isValidOrReturnDescription(state, 'F1112001');
-  // returns 'true'
+  // returns true
 
   const falsyResult = isValidOrReturnDescription(state, 'ABC1112001');
   // returns ["1 Alpha + 7 Numeric"]
