@@ -25,7 +25,7 @@ Pass in a State and a DL Number and it'll validate if it's true or false
 Pass in a State and a DL Number and it'll validate if it's true or false.
 If it is "false", then it will return a description on what it expects
 ```
-  const { isValid } = require('usdl-regex');
+  const { isValidOrReturnDescription } = require('usdl-regex');
 
   const state = 'CA';
 
@@ -38,6 +38,10 @@ If it is "false", then it will return a description on what it expects
 
 CHANGELOG
 =========
+# 1.4.1
+- Fix Massachsetts to accept new DL format starting with "SA"
+- Fixed small readme issues
+
 # 1.4.0
 - Added a new method "isValidOrReturnDescription" to return description on falsy validation
 - Fixed some test cases
