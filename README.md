@@ -38,7 +38,7 @@ If it is "false", then it will return a description on what it expects
 
 CHANGELOG
 =========
-# 1.4.1
+# 1.4.2
 - Fix Massachsetts to accept new DL format starting with "SA"
 - Fixed small readme issues
 
