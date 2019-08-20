@@ -38,6 +38,9 @@ If it is "false", then it will return a description on what it expects
 
 CHANGELOG
 =========
+# 1.5.2
+- Add new MO pattern from evidence of valid licenses, even though I cannot find a spec to say why
+
 # 1.4.2
 - Fix Massachsetts to accept new DL format starting with "SA"
 - Fixed small readme issues
