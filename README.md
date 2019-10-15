@@ -38,6 +38,9 @@ If it is "false", then it will return a description on what it expects
 
 CHANGELOG
 =========
+# 1.5.3
+- Add new OR patter from evidence of valid licenses
+
 # 1.5.2
 - Add new MO pattern from evidence of valid licenses, even though I cannot find a spec to say why
 

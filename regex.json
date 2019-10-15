@@ -266,10 +266,11 @@
     ]
   },
   "OR": {
-    "rule": "(^[0-9]{1,9}$)|(^A[0-9]{6}$)",
+    "rule": "(^[0-9]{1,9}$)|(^[AB][0-9]{6}$)",
     "description": [
       "1-9 Numeric",
-      "A+6 Numeric"
+      "A+6 Numeric",
+      "B+6 Numeric"
     ]
   },
   "PA": {
