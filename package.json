@@ -1,6 +1,6 @@
 {
   "name": "usdl-regex",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "description": "US Driver's License validation via https://ntsi.com/drivers-license-format/",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
   "author": "GasBuddy <developers@gasbuddy.com>",
   "license": "MIT",
   "devDependencies": {
-    "tap": "^14.11.0"
+    "tap": "^15.0.9"
   },
   "repository": {
     "type": "git",
