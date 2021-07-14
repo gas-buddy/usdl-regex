@@ -1,6 +1,6 @@
 {
   "name": "usdl-regex",
-  "version": "1.6.1",
+  "version": "1.7.0",
   "description": "US Driver's License validation via https://ntsi.com/drivers-license-format/",
   "main": "index.js",
   "scripts": {
