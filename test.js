@@ -4,7 +4,6 @@ var usdl = require('./index');
 const test_data = require('./testdata/licenses');
 
 tap.test('isValid => Should validate numbers returning true for valid', function (t) {
-
   Object.keys(test_data).forEach(state => {
     const valid = test_data[state].valid;
 
@@ -19,7 +18,6 @@ tap.test('isValid => Should validate numbers returning true for valid', function
 });
 
 tap.test('isValid => Should validate numbers returning false for invalid', function (t) {
-
   Object.keys(test_data).forEach(state => {
     const invalid = test_data[state].invalid;
 
@@ -34,7 +32,6 @@ tap.test('isValid => Should validate numbers returning false for invalid', funct
 });
 
 tap.test('isValidOrReturnDescription => Should validate numbers returning true for valid', function (t) {
-
   Object.keys(test_data).forEach(state => {
     const valid = test_data[state].valid;
 
@@ -49,7 +46,6 @@ tap.test('isValidOrReturnDescription => Should validate numbers returning true f
 });
 
 tap.test('isValidOrReturnDescription => Should validate numbers returning decription array for invalid', function (t) {
-
   Object.keys(test_data).forEach(state => {
     const invalid = test_data[state].invalid;
 
@@ -61,5 +57,15 @@ tap.test('isValidOrReturnDescription => Should validate numbers returning decrip
     }
   });
 
+  t.end();
+});
+
+tap.test('Bad state should throw', function (t) {
+  t.throws(function () {
+    usdl.isValid('XX', 'MA1234567');
+  }, 'Bad state should throw');
+  t.throws(function () {
+    usdl.isValid('', 'MA1234567');
+  }, 'Empty state throws');
   t.end();
 });
